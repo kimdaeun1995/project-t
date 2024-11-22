@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projec-T</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Instrument Serif", serif;
+            background: url('BG_y.jpg') no-repeat top center;
+            background-size: 100% auto;
+            color: #000;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .description {
+            padding: 20px;
+            text-align: left;
+            line-height: 22px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+            background: transparent;
+        }
+
+        .shop {
+            flex: 1;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            text-align: right;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(0px);
+        }
+
+        .product .image-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            overflow: hidden;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .product img.front {
+            opacity: 1;
+        }
+
+        .product img.back {
+            opacity: 0;
+        }
+
+        .product:hover img.front {
+            opacity: 0;
+        }
+
+        .product:hover img.back {
+            opacity: 1;
+        }
+
+        .product .text-container {
+            margin-top: 20px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        footer {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-left {
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .footer-right {
+            text-align: right;
+            font-size: clamp(32px, 5vw, 72px);
+            letter-spacing: -2px;
+            transform: scaleX(0.8);
+            color: #FFF933;
+        }
+    </style>
+</head>
+<body>
+    <header style="padding: 20px; text-align: center; border-bottom: 1px solid #ccc; background: transparent;">
+        <h1>
+            <img src="Logo_B.png" alt="Projec-T Logo"> <!-- Replace with your logo image path -->
+        </h1>
+    </header>
+    
+    <div class="description">
+        Projec-T is a project focused on creating graphic T-shirts, <br>
+        treating the T-shirt as a blank canvas to design and apply various graphics. <br>
+        All designs were limited to flat graphics, <br>
+        emphasizing how the shapes and compositions <br>
+        of the designs could be expressed on the T-shirt. <br>
+        All products are conceptual and not available for purchase.
+    </div>
+    
+    <main class="shop">
+        <div class="product">
+            <div class="image-container">
+                <img src="T1_B.jpg" alt="Front of T-shirt 1" class="front">
+                <img src="T1_F.jpg" alt="Back of T-shirt 1" class="back">
+            </div>
+            <div class="text-container">
+                <h3>Super Energy Human-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T2_F.jpg" alt="Front of T-shirt 2" class="front">
+                <img src="T2_B.jpg" alt="Back of T-shirt 2" class="back">
+            </div>
+            <div class="text-container">
+                <h3>★Merry CrisTmas-T★</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T3_F.jpg" alt="Front of T-shirt 3" class="front">
+                <img src="T3_B.jpg" alt="Back of T-shirt 3" class="back">
+            </div>
+            <div class="text-container">
+                <h3>Cherry Bomb-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T9_F.jpg" alt="Front of T-shirt 9" class="front">
+                <img src="T9_B.jpg" alt="Back of T-shirt *" class="back">
+            </div>
+            <div class="text-container">
+                <h3>Long Ears Need Caffein-T</h3>
+                <p>30000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T11_F.jpg" alt="Front of T-shirt 11" class="front">
+                <img src="T11_B.jpg" alt="Back of T-shirt 11" class="back">
+            </div>
+            <div class="text-container">
+                <h3>No5 The Elephan-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T11_BB.jpg" alt="Front of T-shirt 11B" class="front">
+                <img src="T11_FB.jpg" alt="Back of T-shirt 11B" class="back">
+            </div>
+            <div class="text-container">
+                <h3>No5 The Elephan-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T12_F.jpg" alt="Front of T-shirt 12" class="front">
+                <img src="T12_B.jpg" alt="Back of T-shirt 12" class="back">
+            </div>
+            <div class="text-container">
+                <h3>HearT Runner-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="image-container">
+                <img src="T13_wF.jpg" alt="Front of T-shirt 13" class="front">
+                <img src="T9_B.jpg" alt="Back of T-shirt 13" class="back">
+            </div>
+            <div class="text-container">
+                <h3>GoThic-T</h3>
+                <p>30,000 KRW</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-left">
+            <p>© 2024 Projec-T. All rights reserved.</p>
+            <p>Contact: info@project-t.com</p>
+        </div>
+        <div class="footer-right">
+            010-5133-2544
+        </div>
+    </footer>
+</body>
+</html>
